@@ -1,6 +1,13 @@
-{ pkgs }:
+{ pkgs ? import (import ./nixpkgs.nix) {}}:
 let
-  inherit (pkgs) callPackage;
+  all = pkgs:
+    let
+      inherit (pkgs) callPackage;
+    in
+      rec {
+  };
 in
-  rec {
+  (all pkgs) // rec {
+    nixpkgs = (import (import ./nixpkgs.nix) {});
+    pinned = all nixpkgs;
   }
