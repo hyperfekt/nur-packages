@@ -1,9 +1,9 @@
 let
-  f = { haskellPackages
-      , haskell
+  f = { callHackageDirect
+      , dontCheck
       , ...}@args:
-      haskell.lib.dontCheck
-        (haskellPackages.callHackageDirect
+      dontCheck
+        (callHackageDirect
           {
             pkg = "hie-bios";
             ver = "0.5.0";

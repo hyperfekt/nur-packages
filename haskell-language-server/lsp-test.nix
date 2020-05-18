@@ -1,9 +1,9 @@
 let
-  f = { haskellPackages
-      , haskell
+  f = { callHackageDirect
+      , dontCheck
       , ...}@args:
-      haskell.lib.dontCheck
-        (haskellPackages.callHackageDirect
+      dontCheck
+        (callHackageDirect
           {
             pkg = "lsp-test";
             ver = "0.10.3.0";

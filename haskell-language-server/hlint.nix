@@ -1,7 +1,7 @@
 let
-  f = { haskellPackages
+  f = { callHackageDirect
       , ...}@args:
-      haskellPackages.callHackageDirect
+      callHackageDirect
         {
           pkg = "hlint";
           ver = "2.2.11";

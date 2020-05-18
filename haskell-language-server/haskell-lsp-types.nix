@@ -1,7 +1,7 @@
 let
-  f = { haskellPackages
+  f = { callHackageDirect
       , ...}@args:
-      haskellPackages.callHackageDirect
+      callHackageDirect
         {
           pkg = "haskell-lsp-types";
           ver = "0.22.0.0";

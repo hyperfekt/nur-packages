@@ -1,9 +1,9 @@
 let
-  f = { haskellPackages
-      , haskell
+  f = { callHackageDirect
+      , dontCheck
       , ...}@args:
-      haskell.lib.dontCheck
-        (haskellPackages.callHackageDirect
+      dontCheck
+        (callHackageDirect
           {
             pkg = "ghc-lib-parser";
             ver = "8.10.1.20200412";

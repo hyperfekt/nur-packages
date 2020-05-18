@@ -1,7 +1,7 @@
 let
-  f = { haskellPackages
+  f = { callHackageDirect
       , ...}@args:
-      haskellPackages.callHackageDirect
+      callHackageDirect
         {
           pkg = "opentelemetry";
           ver = "0.4.0";

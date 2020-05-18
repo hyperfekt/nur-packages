@@ -1,10 +1,10 @@
 let
-  f = { haskellPackages
+  f = { callCabal2nix
       , fetchFromGitHub
-      , haskell
+      , dontCheck
       , ...}@args:
-      haskell.lib.dontCheck
-        (haskellPackages.callCabal2nix
+      dontCheck
+        (callCabal2nix
           "haskell-language-server"
           (fetchFromGitHub {
             owner = "haskell";
