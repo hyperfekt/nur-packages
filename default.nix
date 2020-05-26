@@ -5,7 +5,7 @@ let
       haskellset = haskellPackages: let
         callPackage = pkgs.newScope (pkgs // haskellPackages // pkgs.haskell.lib);
       in with pkgs.haskell.lib; rec {
-        haskell-language-server = callPackage ./haskell-language-server/haskell-language-server.nix { inherit floskell haskell-lsp haskell-lsp-types ormolu ghcide lsp-test; };
+        haskell-language-server = callPackage ./haskell-language-server/haskell-language-server.nix { inherit floskell haskell-lsp haskell-lsp-types ormolu ghcide lsp-test hie-bios; };
           floskell = dontCheck (unmarkBroken (haskellPackages.floskell.override { inherit monad-dijkstra; }));
             monad-dijkstra = dontCheck (unmarkBroken (haskellPackages.monad-dijkstra.override { inherit hlint; }));
               hlint = callPackage ./haskell-language-server/hlint.nix {};
@@ -16,7 +16,7 @@ let
             ghc-lib-parser = callPackage ./haskell-language-server/ghc-lib-parser.nix {};
           ghcide = callPackage ./haskell-language-server/ghcide.nix { inherit haskell-lsp haskell-lsp-types opentelemetry hie-bios lsp-test; };
             opentelemetry = callPackage ./haskell-language-server/opentelemetry.nix {};
-            hie-bios = callPackage ./haskell-language-server/hie-bios.nix {};
+          hie-bios = callPackage ./haskell-language-server/hie-bios.nix {};
       };
     in
       {
