@@ -17,6 +17,7 @@ let
           ghcide = callPackage ./haskell-language-server/ghcide.nix { inherit haskell-lsp haskell-lsp-types opentelemetry hie-bios lsp-test; };
             opentelemetry = callPackage ./haskell-language-server/opentelemetry.nix {};
           hie-bios = callPackage ./haskell-language-server/hie-bios.nix {};
+        hnix = callPackage ./hnix.nix {};
       };
     in
       {
