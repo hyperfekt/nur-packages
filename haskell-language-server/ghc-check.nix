@@ -3,9 +3,9 @@ let
       , ...}@args:
       callHackageDirect
         {
-          pkg = "hlint";
-          ver = "2.2.11";
-          sha256 = "0v4axmqb3zwzznyvhiqbr50k23ah63sd9gsmi5sa2p97hch8kwx1";
+          pkg = "ghc-check";
+          ver = "0.3.0.1";
+          sha256 = "1dj909m09m24315x51vxvcl28936ahsw4mavbc53danif3wy09ns";
         }
         (builtins.removeAttrs args (builtins.attrNames (builtins.functionArgs f)));
 in

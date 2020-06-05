@@ -9,8 +9,8 @@ let
           (fetchFromGitHub {
             owner = "mpickering";
             repo = "ghcide";
-            rev = "27855641693e8247543a1e12ffe9f0fd613f64f5";
-            sha256 = "111hg5qkykfsrabg0nadhgizydy9k04g0nc2k8pyl29l6ppdnxfk";
+            rev = "024d4ec94dea2380cdeee6958ab7c49cff846d12";
+            sha256 = "1rw6j8m2x5ls5sfqpzgp1n4ssk79r1ci4fr1za897zw7mqna1d94";
           })
           (builtins.removeAttrs args (builtins.attrNames (builtins.functionArgs f))));
 in

@@ -9,8 +9,8 @@ let
           (fetchFromGitHub {
             owner = "haskell";
             repo = "haskell-language-server";
-            rev = "0a2be76f5f3496670d7a3f6a8f324a393c859109";
-            sha256 = "0rjlyck806bxdq56d8q82v4qa2dqb49ki9fw2lmfy5c68vadbznf";
+            rev = "2310e1039c90d9bccaffd688a0d1ec79a9360bf4";
+            sha256 = "1c1wfwddgcy8gxx53rvf5sj6g5f0vjsv8vwmnan9asx5jrskz51p";
           })
           (builtins.removeAttrs args (builtins.attrNames (builtins.functionArgs f))));
 in
